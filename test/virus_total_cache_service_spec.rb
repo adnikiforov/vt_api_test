@@ -1,6 +1,6 @@
 require 'rspec'
 require './spec_helper'
-require './virus_total_cache_service'
+require '../virus_total_cache_service'
 
 describe 'VirusTotalCacheService.scan' do
   before do
