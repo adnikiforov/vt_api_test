@@ -33,7 +33,7 @@ class VirusTotalCacheService
   # На самом деле тут нет никакой инициализации, метод можно сделать статическим
   def scan(url)
     res = RestClient.post(ApiUrl, :apikey => ApiKey, :resource => url)
-    case res.response_code
+    case res.code
       when 200
         generate_result(json)
       when 204
