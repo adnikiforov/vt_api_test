@@ -41,7 +41,6 @@ class VirusTotalCacheService
       else
         logger.error 'Some error here'
     end
-    generate_result(JSON.parse(res))
   end
 
   private
