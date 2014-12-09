@@ -35,7 +35,7 @@ class VirusTotalCacheService
     res = RestClient.post(ApiUrl, :apikey => ApiKey, :resource => url)
     case res.code
       when 200
-        generate_result(json)
+        generate_result(JSON.parse(res))
       when 204
         logger.error 'VirusTotal API request rate limit quota exceeds'
       else
