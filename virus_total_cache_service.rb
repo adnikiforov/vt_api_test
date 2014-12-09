@@ -61,7 +61,7 @@ class VirusTotalCacheService
     # Лучше сделать один обход и вытащить все результаты сразу
     # На самом деле даже свертку можно уместить сюда при необходимости
     scans.each do |key, scan|
-      if ProblemResultsList.include?(scan['result'])
+      if ProblemResultsList.include?(scan)
         safe = false
         problems[key] = scan
       end
